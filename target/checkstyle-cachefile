@@ -1,0 +1,4 @@
+#Wed Jun 11 20:30:33 WIB 2025
+configuration*?=959E47B3FCFE9C6AC3BB9EFF0C49DADE4E8FB992
+module-resource*?\:checkstyle-suppressions.xml=FC21BD1485BC1B8662A4516312044DBC6ABB3892
+module-resource*?\:checkstyle-xpath-suppressions.xml=EC41C8AAEFA74862AA2786D27ECE3C9000F78EED
