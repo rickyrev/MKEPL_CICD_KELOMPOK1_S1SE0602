@@ -1,10 +1,12 @@
 package kelompok1.example;
 
 import java.util.Scanner;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class App {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
         System.out.println("Berapa banyak nama yang ingin dimasukkan?");
         int count = scanner.nextInt();
         scanner.nextLine(); // untuk mengonsumsi newline
@@ -18,7 +20,11 @@ public class App {
         scanner.close();
     }
 
+    // Untuk runtime (pakai waktu sekarang)
     public static String greet(String name) {
-        return "Halo, " + name + "!";
+        // Tambahkan jam saat ini
+        LocalTime timeNow = LocalTime.now();
+        String formattedTime = timeNow.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+        return "Halo, " + name + "! Sekarang jam: " + formattedTime;
     }
 }
