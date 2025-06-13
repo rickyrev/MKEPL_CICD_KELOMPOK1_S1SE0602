@@ -6,15 +6,17 @@ import static org.junit.Assert.*;
 public class AppTest {
 
     @Test
-    public void testGreetContainsName() {
-        String result = App.greet("Andi");
-        assertTrue(result.contains("Andi"));
-        assertTrue(result.contains("Halo"));
+    public void testGreetWithNormalName() {
+        assertEquals("Halo, Andi!", App.greet("Andi"));
     }
 
     @Test
-    public void testGreetContainsTime() {
-        String result = App.greet("Budi");
-        assertTrue(result.contains(":")); // Harus mengandung jam
+    public void testGreetWithEmptyString() {
+        assertEquals("Halo, !", App.greet(""));
+    }
+
+    @Test
+    public void testGreetWithSpecialCharacters() {
+        assertEquals("Halo, @123!", App.greet("@123"));
     }
 }
