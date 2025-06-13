@@ -19,4 +19,8 @@ public class AppTest {
     public void testGreetWithSpecialCharacters() {
         assertEquals("Halo, @123!", App.greet("@123"));
     }
+    @Test
+    public void testGreetWithEmptyString() {
+        assertEquals("Halo, david !", App.greet(""));
+    }
 }
